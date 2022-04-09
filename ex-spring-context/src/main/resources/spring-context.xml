@@ -6,7 +6,11 @@
 
     <bean id="xmlBasedService" name="firstBeanName,secondBeanName"
           class="ex.spring.context.xmlbasedconfig.service.impl.XmlBasedServiceImpl">
+        <!-- field injection is not available in XML configuration -->
+        <!-- for constructor injection -->
         <constructor-arg name="dependency" ref="dependency"/>
+        <!-- for setter injection -->
+        <!-- <property name="dependency" ref="dependency"></property> -->
     </bean>
 
     <bean id="dependency" class="ex.spring.context.xmlbasedconfig.service.impl.DependencyImpl"/>

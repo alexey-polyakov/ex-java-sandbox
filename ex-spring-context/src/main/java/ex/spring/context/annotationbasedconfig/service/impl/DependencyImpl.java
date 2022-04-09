@@ -18,11 +18,11 @@ public class DependencyImpl implements Dependency {
     @Override
     public void doSomething() {
         circularDependency.doSomething();
-        log.info(">>>> doSomething from DependencyServiceImpl");
+        log.info(">>>> doSomething from DependencyImpl");
     }
 
     @Override
     public void doNothing() {
-        log.info(">>>> doNothing from DependencyServiceImpl");
+        log.info(">>>> doNothing from DependencyImpl");
     }
 }

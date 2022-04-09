@@ -14,6 +14,8 @@ public class CircularDependencyImpl implements CircularDependency {
 
     private final Dependency dependency;
 
+    // jdk.proxy2.$Proxy9@2052
+    // without Lazy - Error creating bean with name 'dependencyImpl': Requested bean is currently in creation: Is there an unresolvable circular reference?
     public CircularDependencyImpl(@Lazy Dependency dependency) {
         this.dependency = dependency;
     }
