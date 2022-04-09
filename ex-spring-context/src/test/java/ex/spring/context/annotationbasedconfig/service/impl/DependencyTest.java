@@ -8,10 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-@SpringJUnitConfig({
-        CircularDependencyImpl.class,
-        DependencyImpl.class
-})
+@SpringJUnitConfig(TestConfig.class)
 @DisplayName("Test should check that Dependency initialized properly")
 class DependencyTest {
 
@@ -22,7 +19,7 @@ class DependencyTest {
     private Dependency dependency;
 
     @Test
-    @DisplayName("should check that dependency is not null")
+    @DisplayName("should check that dependency and applicationContext are not null")
     void shouldCheckThatObjectNonNull() {
         Assertions.assertThat(applicationContext).isNotNull();
         Assertions.assertThat(dependency).isNotNull();

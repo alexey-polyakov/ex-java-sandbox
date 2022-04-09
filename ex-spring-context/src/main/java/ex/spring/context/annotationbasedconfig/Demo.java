@@ -13,7 +13,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan
+@ComponentScan // if we will move DependencyImpl out of annotationbasedconfig folder it won't find it
 @RequiredArgsConstructor
 public class Demo {
 
